@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailService
 {
-    public static function send()
+    public static function send($view='success',$msg="success")
     {
         $user=new User();
         $user->email='836334258@qq.com';
@@ -18,6 +18,6 @@ class EmailService
 
         Mail::to($user)
             ->cc($user)
-            ->send(new SpiderSuccess());
+            ->send(new SpiderSuccess($msg,$view));
     }
 }

@@ -11,14 +11,18 @@ class SpiderSuccess extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $view;
+    public $msg;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(string $msg, string $view)
     {
-        //
+        $this->msg = $msg;
+        $this->view = $view;
     }
 
     /**
@@ -29,9 +33,10 @@ class SpiderSuccess extends Mailable
     public function build()
     {
         return $this
-            ->view('emails.spider.success')
+            ->view('emails.spider.'.$this->view)
             ->with([
-                'now'=>now()->toDateTimeString()
+                'now' => now()->toDateTimeString(),
+                'msg' =>$this->msg
             ]);
     }
 }

@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'RPC',
+    'timezone' => 'Asia/Shanghai',
 
     /*
     |--------------------------------------------------------------------------
@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \App\Providers\SpiderProvider::class,
         /*
          * Application Service Providers...
          */
