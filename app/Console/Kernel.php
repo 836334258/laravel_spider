@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
     {
 //         $schedule->command('send:email')->everyMinute();
 //        $schedule->job(new StartSpider())->everyTwoHours();
-        $schedule->command(StartSpiderCommand::class)->everyMinute();
+        $schedule->command(StartSpiderCommand::class)->everyTwoHours();
     }
 
     /**
