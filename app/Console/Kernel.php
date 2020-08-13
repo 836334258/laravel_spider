@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\StartSpiderCommand;
 use App\Jobs\StartSpider;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -27,7 +28,7 @@ class Kernel extends ConsoleKernel
     {
 //         $schedule->command('send:email')->everyMinute();
 //        $schedule->job(new StartSpider())->everyTwoHours();
-        $schedule->command('start:spider')->everyMinute();
+        $schedule->command(StartSpiderCommand::class)->everyMinute();
     }
 
     /**
