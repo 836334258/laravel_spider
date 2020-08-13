@@ -56,7 +56,7 @@ class SpiderService
             return;
         }
 
-        EmailService::send();
+//        EmailService::send();
 
     }
 
