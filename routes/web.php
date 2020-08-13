@@ -15,4 +15,3 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController');
 
-Route::get('test','TestController@test');
