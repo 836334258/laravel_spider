@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController');
+Route::get('/', 'IndexController')->name('index');
+
+Route::get("/search","SearchController@search")->name('search');
 

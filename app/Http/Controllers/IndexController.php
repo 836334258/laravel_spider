@@ -13,6 +13,7 @@ class IndexController extends Controller
             ->latest()
             ->paginate();
 
+
         return view('welcome',compact('paginate'));
     }
 }
