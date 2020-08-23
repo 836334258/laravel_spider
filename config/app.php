@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         \App\Providers\SpiderProvider::class,
+        Elasticquent\ElasticquentServiceProvider::class,
         /*
          * Application Service Providers...
          */

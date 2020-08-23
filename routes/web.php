@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController')->name('index');
+Route::get('/soar', 'SoarController@index')->name('soar.index');
+Route::post('/soar', 'SoarController@list')->name('soar.post');
 
 Route::get("/search","SearchController@search")->name('search');
 

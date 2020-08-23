@@ -24,6 +24,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('index')}}">主页 <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('soar.index')}}">Soar <span class="sr-only">(current)</span></a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="{{route('search')}}">
             @csrf
